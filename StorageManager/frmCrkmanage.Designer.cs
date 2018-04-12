@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrkmanage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrkmanage));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grpCz = new System.Windows.Forms.GroupBox();
@@ -52,6 +52,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grpCz.SuspendLayout();
@@ -92,6 +93,7 @@
             this.grpCz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCz.AutoSize = true;
+            this.grpCz.Controls.Add(this.button1);
             this.grpCz.Controls.Add(this.btnRk);
             this.grpCz.Controls.Add(this.btnCk);
             this.grpCz.Location = new System.Drawing.Point(1250, 6);
@@ -294,6 +296,17 @@
             this.reportViewer1.Size = new System.Drawing.Size(1982, 827);
             this.reportViewer1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(348, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 51);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "请点击入库";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmCrkmanage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -343,6 +356,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColByInfo;
         private System.Windows.Forms.GroupBox groupBox3;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button button1;
 
     }
 }
