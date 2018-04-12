@@ -1,0 +1,4 @@
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\bin\Release\DatabaseScanner.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\bin\Release\DatabaseScanner.pdb
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\obj\Release\DatabaseScanner.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\obj\Release\DatabaseScanner.pdb

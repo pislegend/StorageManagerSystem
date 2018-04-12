@@ -1,0 +1,9 @@
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\obj\Debug\StorageAccessData.csprojResolveAssemblyReference.cache
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\StorageAccessData.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\StorageAccessData.pdb
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\obj\Debug\StorageAccessData.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\obj\Debug\StorageAccessData.pdb
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\DatabaseScanner.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\StorageMember.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\DatabaseScanner.pdb
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageAccessData\bin\Debug\StorageMember.pdb

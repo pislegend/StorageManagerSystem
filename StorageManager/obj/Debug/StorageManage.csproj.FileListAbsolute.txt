@@ -1,0 +1,12 @@
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\bin\Debug\StorageManager.exe.config
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\bin\Debug\StorageManager.exe
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\bin\Debug\StorageManager.pdb
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\bin\Debug\UtilityLibrary.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmOutLookNavBar.resources
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmSplashStartUp.resources
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmStorageMain.resources
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.Properties.Resources.resources
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManage.csproj.GenerateResource.Cache
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.exe
+D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.pdb

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageManager", "StorageManager\StorageManager.csproj", "{5A5510B6-56FF-4D06-A262-CEC49BF140ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseScanner", "DatabaseScanner\DatabaseScanner.csproj", "{090499DF-7D2F-4DD1-B850-0456A0BC76E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageAccessData", "StorageAccessData\StorageAccessData.csproj", "{DCF896F3-71A8-4147-961B-9BB90410A427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMember", "StorageMember\StorageMember.csproj", "{3E38DD8A-75AC-4340-8D74-28EB2220524B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A5510B6-56FF-4D06-A262-CEC49BF140ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5510B6-56FF-4D06-A262-CEC49BF140ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5510B6-56FF-4D06-A262-CEC49BF140ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5510B6-56FF-4D06-A262-CEC49BF140ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090499DF-7D2F-4DD1-B850-0456A0BC76E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090499DF-7D2F-4DD1-B850-0456A0BC76E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090499DF-7D2F-4DD1-B850-0456A0BC76E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090499DF-7D2F-4DD1-B850-0456A0BC76E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF896F3-71A8-4147-961B-9BB90410A427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF896F3-71A8-4147-961B-9BB90410A427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF896F3-71A8-4147-961B-9BB90410A427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF896F3-71A8-4147-961B-9BB90410A427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E38DD8A-75AC-4340-8D74-28EB2220524B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E38DD8A-75AC-4340-8D74-28EB2220524B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E38DD8A-75AC-4340-8D74-28EB2220524B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E38DD8A-75AC-4340-8D74-28EB2220524B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
