@@ -302,7 +302,7 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCrkmanage";
-            this.TabText = "备件仪表入库";
+            this.TabText = "备件仪表出入库";
             this.Text = "备件仪表出入库";
             this.Load += new System.EventHandler(this.frmRkmanage_Load);
             this.tabControl1.ResumeLayout(false);

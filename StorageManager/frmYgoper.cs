@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StorageManager
 {
-    public partial class frmByXxInfo : Form
+    public partial class frmYgoper : Form
     {
-        public frmByXxInfo()
+        public frmYgoper()
         {
             InitializeComponent();
         }

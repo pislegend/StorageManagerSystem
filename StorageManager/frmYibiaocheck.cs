@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StorageManager
 {
-    public partial class frmByXxInfo : Form
+    public partial class frmYibiaocheck : Form
     {
-        public frmByXxInfo()
+        public frmYibiaocheck()
         {
             InitializeComponent();
         }

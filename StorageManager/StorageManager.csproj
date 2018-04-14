@@ -88,6 +88,18 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBmodify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBmodify.Designer.cs">
+      <DependentUpon>frmBmodify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoper.Designer.cs">
+      <DependentUpon>frmBoper.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmByManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,18 @@
     </Compile>
     <Compile Include="frmByXxInfo.Designer.cs">
       <DependentUpon>frmByXxInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelete.Designer.cs">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHcuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHcuse.Designer.cs">
+      <DependentUpon>frmHcuse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInfoCx.cs">
       <SubType>Form</SubType>
@@ -136,6 +160,30 @@
     <Compile Include="frmStorageMain.Designer.cs">
       <DependentUpon>frmStorageMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmYgmodify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYgmodify.Designer.cs">
+      <DependentUpon>frmYgmodify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYgoper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYgoper.Designer.cs">
+      <DependentUpon>frmYgoper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYibiaocheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYibiaocheck.Designer.cs">
+      <DependentUpon>frmYibiaocheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYibiaotest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYibiaotest.Designer.cs">
+      <DependentUpon>frmYibiaotest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ISplashForm.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -151,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmByManage.resx">
       <DependentUpon>frmByManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmByXxInfo.resx">
-      <DependentUpon>frmByXxInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfoCx.resx">
       <DependentUpon>frmInfoCx.cs</DependentUpon>
