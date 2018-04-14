@@ -49,6 +49,7 @@
             this.tsrbCrk = new System.Windows.Forms.ToolStripButton();
             this.tsrbInfocx = new System.Windows.Forms.ToolStripButton();
             this.tsrbBym = new System.Windows.Forms.ToolStripButton();
+            this.tsrbBackup = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsrbExit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -176,6 +177,7 @@
             this.tsrbCrk,
             this.tsrbInfocx,
             this.tsrbBym,
+            this.tsrbBackup,
             this.toolStripSeparator1,
             this.tsrbExit,
             this.toolStripSeparator2,
@@ -231,6 +233,15 @@
             this.tsrbBym.Size = new System.Drawing.Size(242, 36);
             this.tsrbBym.Text = "备件仪表综合管理";
             this.tsrbBym.Click += new System.EventHandler(this.tsrbBym_Click);
+            // 
+            // tsrbBackup
+            // 
+            this.tsrbBackup.Image = ((System.Drawing.Image)(resources.GetObject("tsrbBackup.Image")));
+            this.tsrbBackup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsrbBackup.Name = "tsrbBackup";
+            this.tsrbBackup.Size = new System.Drawing.Size(228, 36);
+            this.tsrbBackup.Text = "数据库导出/导入";
+            this.tsrbBackup.Click += new System.EventHandler(this.tsrbBackup_Click);
             // 
             // toolStripSeparator1
             // 
@@ -353,6 +364,7 @@
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         public WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel;
         public System.Windows.Forms.ToolStripStatusLabel tsrslblUserName;
+        private System.Windows.Forms.ToolStripButton tsrbBackup;
     }
 }
 

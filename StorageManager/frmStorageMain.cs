@@ -21,6 +21,7 @@ namespace StorageManager
         //private frmLogin frmlogin = null;
         private frmLogin frmlogin = new frmLogin();
         private frmRegister frmregister = new frmRegister();
+        private frmBackup frmbackup = new frmBackup();
         private bool timeflag = false;
         #endregion
         public frmStorageMain()
@@ -34,8 +35,9 @@ namespace StorageManager
             ///加载程序代码开始
             frmoutlooknavbar.Show(this.dockPanel,DockState.DockLeft);
             frmcrkmanage.Show(this.dockPanel);           
-            frminfocx.Show(this.dockPanel);
+            frminfocx.Show(this.dockPanel); 
             frmbymanage.Show(this.dockPanel);
+            frmbackup.Show(this.dockPanel);
             timeflag = true;
             tsrbTime.Text = DateTime.Now.ToString();
             tsrslblTime.Text = DateTime.Now.ToString();
@@ -101,6 +103,13 @@ namespace StorageManager
              }
         }
 
+        private void tsrbBackup_Click(object sender, EventArgs e)
+        {
+            if (frmbackup.Visible)
+                frmbackup.Hide();
+            else
+                frmbackup.Show();
+        }
         #endregion
         #region
         private void 登录LToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,6 +151,10 @@ namespace StorageManager
         {
             Application.Exit();
         }
+
+
+
+     
 
 
 
