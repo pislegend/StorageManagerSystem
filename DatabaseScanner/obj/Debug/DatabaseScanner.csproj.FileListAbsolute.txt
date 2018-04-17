@@ -7,3 +7,4 @@ C:\Users\surface\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.
 C:\Users\surface\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.pdb
 C:\Users\surface\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.dll
 C:\Users\surface\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.pdb
+C:\Users\surface\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.csprojResolveAssemblyReference.cache

@@ -48,3 +48,4 @@ C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\DatabaseScanner.p
 C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\StorageAccessData.pdb
 C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\StorageMember.pdb
 C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmBackup.resources
+C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmByXxInfo.resources

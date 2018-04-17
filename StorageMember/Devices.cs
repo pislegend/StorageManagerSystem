@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace StorageMember
 {
     /// <summary>
-    /// 备件仪表信息实体类
+    /// 放弃使用，2018-4-17
     /// </summary>
     public class Devices
     {

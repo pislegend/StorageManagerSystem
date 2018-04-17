@@ -117,6 +117,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -135,9 +138,6 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -172,7 +172,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(1206, 14);
+            this.textBox7.Location = new System.Drawing.Point(1188, 19);
             this.textBox7.Margin = new System.Windows.Forms.Padding(6);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(150, 35);
@@ -446,18 +446,18 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(122, 14);
+            this.textBox13.Location = new System.Drawing.Point(148, 14);
             this.textBox13.Margin = new System.Windows.Forms.Padding(6);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(196, 35);
+            this.textBox13.Size = new System.Drawing.Size(170, 35);
             this.textBox13.TabIndex = 1;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(476, 16);
+            this.textBox14.Location = new System.Drawing.Point(480, 16);
             this.textBox14.Margin = new System.Windows.Forms.Padding(6);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(176, 35);
+            this.textBox14.Size = new System.Drawing.Size(172, 35);
             this.textBox14.TabIndex = 3;
             // 
             // label35
@@ -472,10 +472,10 @@
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(840, 16);
+            this.textBox15.Location = new System.Drawing.Point(848, 16);
             this.textBox15.Margin = new System.Windows.Forms.Padding(6);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(196, 35);
+            this.textBox15.Size = new System.Drawing.Size(188, 35);
             this.textBox15.TabIndex = 5;
             // 
             // label36
@@ -490,10 +490,10 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(830, 12);
+            this.textBox10.Location = new System.Drawing.Point(854, 12);
             this.textBox10.Margin = new System.Windows.Forms.Padding(6);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(196, 35);
+            this.textBox10.Size = new System.Drawing.Size(172, 35);
             this.textBox10.TabIndex = 5;
             // 
             // label18
@@ -513,7 +513,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(1322, 12);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(6);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(194, 35);
+            this.dateTimePicker3.Size = new System.Drawing.Size(208, 35);
             this.dateTimePicker3.TabIndex = 17;
             this.dateTimePicker3.Value = new System.DateTime(2018, 4, 7, 0, 0, 0, 0);
             // 
@@ -558,10 +558,10 @@
             "报废",
             "齐全",
             "缺失"});
-            this.comboBox8.Location = new System.Drawing.Point(516, 14);
+            this.comboBox8.Location = new System.Drawing.Point(529, 14);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(154, 32);
+            this.comboBox8.Size = new System.Drawing.Size(147, 32);
             this.comboBox8.TabIndex = 11;
             // 
             // label20
@@ -604,10 +604,10 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(520, 12);
+            this.textBox8.Location = new System.Drawing.Point(529, 12);
             this.textBox8.Margin = new System.Windows.Forms.Padding(6);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 35);
+            this.textBox8.Size = new System.Drawing.Size(147, 35);
             this.textBox8.TabIndex = 3;
             // 
             // label14
@@ -629,20 +629,20 @@
             "终端设备室",
             "导航设备室",
             "动力设备室"});
-            this.comboBox10.Location = new System.Drawing.Point(148, 14);
+            this.comboBox10.Location = new System.Drawing.Point(148, 17);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(174, 32);
+            this.comboBox10.Size = new System.Drawing.Size(170, 32);
             this.comboBox10.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1316, 10);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1322, 10);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(208, 35);
             this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.Value = new System.DateTime(2018, 4, 7, 0, 0, 0, 0);
             // 
@@ -693,10 +693,10 @@
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(850, 14);
+            this.comboBox7.Location = new System.Drawing.Point(854, 19);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(170, 32);
+            this.comboBox7.Size = new System.Drawing.Size(172, 32);
             this.comboBox7.TabIndex = 23;
             // 
             // panel5
@@ -723,10 +723,10 @@
             this.comboBox6.Items.AddRange(new object[] {
             "在库",
             "出库"});
-            this.comboBox6.Location = new System.Drawing.Point(506, 14);
+            this.comboBox6.Location = new System.Drawing.Point(529, 19);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(170, 32);
+            this.comboBox6.Size = new System.Drawing.Size(147, 32);
             this.comboBox6.TabIndex = 22;
             // 
             // button3
@@ -763,10 +763,10 @@
             // comboBox9
             // 
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(148, 14);
+            this.comboBox9.Location = new System.Drawing.Point(148, 19);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(174, 32);
+            this.comboBox9.Size = new System.Drawing.Size(170, 32);
             this.comboBox9.TabIndex = 17;
             // 
             // label23
@@ -1149,6 +1149,36 @@
             this.panel9.Size = new System.Drawing.Size(1566, 370);
             this.panel9.TabIndex = 5;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(230, 30);
+            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(130, 24);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "文件路径：";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(482, 24);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(286, 35);
+            this.textBox19.TabIndex = 5;
+            this.textBox19.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox19_MouseDoubleClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1042, 24);
+            this.button7.Margin = new System.Windows.Forms.Padding(6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(150, 46);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "导入";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1340,36 +1370,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(185, 40);
             this.contextMenuStrip1.Text = "部件操作记录";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(230, 30);
-            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(130, 24);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "文件路径：";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(482, 24);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(286, 35);
-            this.textBox19.TabIndex = 5;
-            this.textBox19.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox19_MouseDoubleClick);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1042, 24);
-            this.button7.Margin = new System.Windows.Forms.Padding(6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 46);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "导入";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // frmByManage
             // 

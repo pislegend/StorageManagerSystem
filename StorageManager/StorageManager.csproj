@@ -200,6 +200,9 @@
     <EmbeddedResource Include="frmByManage.resx">
       <DependentUpon>frmByManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmByXxInfo.resx">
+      <DependentUpon>frmByXxInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfoCx.resx">
       <DependentUpon>frmInfoCx.cs</DependentUpon>
     </EmbeddedResource>

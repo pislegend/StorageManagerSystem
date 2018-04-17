@@ -15,6 +15,7 @@ namespace StorageManager
         public frmByXxInfo()
         {
             InitializeComponent();
+
         }
     }
 }
