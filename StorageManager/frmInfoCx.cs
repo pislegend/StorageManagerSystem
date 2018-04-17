@@ -20,7 +20,7 @@ namespace StorageManager
             frminfocx = this;
         }
 
-        string ConStr = "server=;database=storemanagement;integrated security=SSPI";
+        string ConStr = "server=TANGZHIHU;database=SrorageDB_new;uid=sa;pwd=123;Max Pool Size=20000;";
         SqlConnection conn;
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -32,7 +32,7 @@ namespace StorageManager
                 dataGridView1.DataSource = null;
                 if (textBox1.Text != "")
                 {
-                    SqlCommand cmd = new SqlCommand("select *from storemanagement.dbo.Bujianinfor_1 where 序号='" + textBox1.Text + "'", conn);
+                    SqlCommand cmd = new SqlCommand("select *from SrorageDB.dbo.BJTable where 序号='" + textBox1.Text + "'", conn);
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataSet ds = new DataSet();
@@ -84,14 +84,14 @@ namespace StorageManager
             else
                 frmdelete.StartPosition = FormStartPosition.CenterScreen;
             frmdelete.Show();
-            sqldelete = "delete from storemanagement.dbo.Bujianinfor_1 where 序号='" + frmInfoCx.frminfocx.dataGridView1.SelectedRows[0].Cells[0].Value + "'";
+            sqldelete = "delete from SrorageDB.dbo.BJTable where 序号='" + frmInfoCx.frminfocx.dataGridView1.SelectedRows[0].Cells[0].Value + "'";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection(ConStr);
             conn.Open();
-            string sql = "select * from storemanagement.dbo.Bujianinfor_1 ";
+            string sql = "select * from SrorageDB.dbo.BJTable ";
             if (textBox2.Text != "" | textBox3.Text != "" | comboBox1.Text != "" | comboBox2.Text != "" | comboBox3.Text != "" | comboBox4.Text != "")
             {
                 if (textBox2.Text != "")
@@ -148,7 +148,7 @@ namespace StorageManager
                 dataGridView2.DataSource = null;
                 if (textBox6.Text != "")
                 {
-                    SqlCommand cmd = new SqlCommand("select *from storemanagement.dbo.Yigonginfor_1 where 序号='" + textBox6.Text + "'", conn);
+                    SqlCommand cmd = new SqlCommand("select *from SrorageDB.dbo.YBTools where 序号='" + textBox6.Text + "'", conn);
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataSet ds = new DataSet();
@@ -199,7 +199,7 @@ namespace StorageManager
             else
                 frmdelete.StartPosition = FormStartPosition.CenterScreen;
             frmdelete.Show();
-            sqldelete = "delete from storemanagement.dbo.Yigonginfor_1 where 序号='" + frmInfoCx.frminfocx.dataGridView2.SelectedRows[0].Cells[0].Value + "'";
+            sqldelete = "delete from SrorageDB.dbo.YBTools where 序号='" + frmInfoCx.frminfocx.dataGridView2.SelectedRows[0].Cells[0].Value + "'";
         }
 
         private void 季度通电测试ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -244,7 +244,7 @@ namespace StorageManager
         {
             conn = new SqlConnection(ConStr);
             conn.Open();
-            string sql = "select * from storemanagement.dbo.Yigonginfor_1 ";
+            string sql = "select * from SrorageDB.dbo.YBTools ";
 
             if (comboBox8.Text != "" | comboBox7.Text != "")
             {

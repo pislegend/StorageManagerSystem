@@ -3,3 +3,7 @@ D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\obj\D
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.dll
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.pdb
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.csprojResolveAssemblyReference.cache
+C:\Users\surface\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.dll
+C:\Users\surface\StorageManagerSystem\DatabaseScanner\bin\Debug\DatabaseScanner.pdb
+C:\Users\surface\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.dll
+C:\Users\surface\StorageManagerSystem\DatabaseScanner\obj\Debug\DatabaseScanner.pdb

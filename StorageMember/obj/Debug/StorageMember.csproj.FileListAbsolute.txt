@@ -5,3 +5,10 @@ D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageMember\bin\Deb
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.csprojResolveAssemblyReference.cache
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.dll
 D:\StorageSystem\StorageManagerSystem\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.pdb
+C:\Users\surface\StorageManagerSystem\StorageMember\bin\Debug\StorageMember.dll
+C:\Users\surface\StorageManagerSystem\StorageMember\bin\Debug\StorageMember.pdb
+C:\Users\surface\StorageManagerSystem\StorageMember\bin\Debug\DatabaseScanner.dll
+C:\Users\surface\StorageManagerSystem\StorageMember\bin\Debug\DatabaseScanner.pdb
+C:\Users\surface\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.csprojResolveAssemblyReference.cache
+C:\Users\surface\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.dll
+C:\Users\surface\StorageManagerSystem\StorageMember\obj\Debug\StorageMember.pdb

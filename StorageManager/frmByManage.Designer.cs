@@ -97,11 +97,11 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -135,6 +135,9 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -256,6 +259,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(286, 35);
             this.textBox16.TabIndex = 1;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             this.textBox16.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox16_MouseDoubleClick);
             // 
             // button6
@@ -804,7 +808,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 26);
+            this.label6.Location = new System.Drawing.Point(0, 25);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 24);
@@ -844,7 +848,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "在库",
             "出库"});
-            this.comboBox4.Location = new System.Drawing.Point(1224, 22);
+            this.comboBox4.Location = new System.Drawing.Point(1220, 22);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(196, 32);
@@ -869,7 +873,7 @@
             this.comboBox1.Location = new System.Drawing.Point(136, 20);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 32);
+            this.comboBox1.Size = new System.Drawing.Size(192, 32);
             this.comboBox1.TabIndex = 9;
             // 
             // label7
@@ -891,7 +895,7 @@
             "终端设备室",
             "导航设备室",
             "动力设备室"});
-            this.comboBox2.Location = new System.Drawing.Point(484, 22);
+            this.comboBox2.Location = new System.Drawing.Point(488, 26);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(202, 32);
@@ -904,7 +908,7 @@
             "正常",
             "故障",
             "送修"});
-            this.comboBox3.Location = new System.Drawing.Point(830, 20);
+            this.comboBox3.Location = new System.Drawing.Point(836, 20);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(196, 32);
@@ -913,31 +917,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(726, 28);
+            this.label8.Location = new System.Drawing.Point(718, 26);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 24);
+            this.label8.Size = new System.Drawing.Size(106, 24);
             this.label8.TabIndex = 12;
-            this.label8.Text = "状态：";
+            this.label8.Text = "状  态：";
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(488, 12);
             this.textBox6.Margin = new System.Windows.Forms.Padding(6);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(196, 35);
+            this.textBox6.Size = new System.Drawing.Size(202, 35);
             this.textBox6.TabIndex = 19;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1220, 8);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 46);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "导入";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
@@ -952,7 +945,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 20);
+            this.label10.Location = new System.Drawing.Point(18, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(106, 24);
@@ -981,6 +974,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1580, 70);
             this.panel3.TabIndex = 23;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1220, 8);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 46);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "导入";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -1034,10 +1038,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(492, 6);
+            this.textBox3.Location = new System.Drawing.Point(488, 10);
             this.textBox3.Margin = new System.Windows.Forms.Padding(6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 35);
+            this.textBox3.Size = new System.Drawing.Size(202, 35);
             this.textBox3.TabIndex = 3;
             // 
             // label3
@@ -1053,12 +1057,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 16);
+            this.label2.Location = new System.Drawing.Point(24, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "序号：";
+            this.label2.Text = "序  号：";
             // 
             // textBox2
             // 
@@ -1118,29 +1122,38 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1566, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(1560, 296);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // panel9
             // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.label25);
+            this.panel9.Controls.Add(this.textBox19);
+            this.panel9.Controls.Add(this.button7);
             this.panel9.Controls.Add(this.dataGridView1);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(6, 108);
+            this.panel9.Location = new System.Drawing.Point(6, 34);
             this.panel9.Margin = new System.Windows.Forms.Padding(6);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1566, 296);
+            this.panel9.Size = new System.Drawing.Size(1566, 370);
             this.panel9.TabIndex = 5;
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.panel9);
             this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Location = new System.Drawing.Point(12, 274);
@@ -1154,10 +1167,11 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(6, 34);
             this.panel4.Margin = new System.Windows.Forms.Padding(6);
             this.panel4.Name = "panel4";
@@ -1327,6 +1341,36 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(185, 40);
             this.contextMenuStrip1.Text = "部件操作记录";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(230, 30);
+            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(130, 24);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "文件路径：";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(482, 24);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(286, 35);
+            this.textBox19.TabIndex = 5;
+            this.textBox19.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox19_MouseDoubleClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1042, 24);
+            this.button7.Margin = new System.Windows.Forms.Padding(6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(150, 46);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "导入";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // frmByManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -1364,6 +1408,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1451,7 +1496,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox5;
@@ -1489,5 +1533,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Button button7;
     }
 }
