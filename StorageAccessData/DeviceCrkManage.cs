@@ -120,10 +120,65 @@ namespace StorageAccessData
         /// <summary>
         /// 根据扫描信息对数据库中的备件仪表进行状态更新
         /// </summary>
-        /// <param name="DeviceID"></param>
-        public bool UpdateInfotodatebase()
+        /// <param name="flag">操作时出库还是入库的标志变量</param>
+        /// <param name="hcnumber">更新的耗材数量</param>
+        /// <param name="id">项目的ID号</param>
+        /// <param name="number">0备件，1仪表还是2耗材</param>
+        public bool UpdateInfotodatebase(string flag,int number,string id,int hcnumber)
         {
-            return true;
+            try
+            {
+                CommonSql pComm = new CommonSql();
+                string strSql = null;
+                pComm.Open();
+
+                switch(number){
+                    case 1://备件
+                        if (flag == "c")
+                        {
+                            strSql = "UPDATE BJTable SET BJIsInStorage='0' WHERE BJId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }else if(flag=="r")
+                        {
+                            strSql = "UPDATE BJTable SET BJIsInStorage='1' WHERE BJId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }
+                        break;
+                    case 2://仪表
+                        if (flag == "c")
+                        {
+                            strSql = "UPDATE YBTools SET YBToolsIsInStorage='0' WHERE YBToolId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }else if(flag=="r")
+                        {
+                            strSql = "UPDATE BJTable SET YBToolsIsInStorage='1' WHERE YBToolId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }
+                        break;
+                    case 3://耗材
+                        if (flag == "c")
+                        {
+                            strSql = "UPDATE HCTable SET HCResidue=HCResidue-hcnumber WHERE HCId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }else if(flag=="r")
+                        {
+                            strSql = "UPDATE HCTable SET HCResidue=HCResidue+hcnumber WHERE HCId='id'";
+                            pComm.Execute(strSql);
+                            pComm.Close();
+                        }
+                        break;
+                }
+                return true; 
+            }
+            catch
+            {    
+                return false;
+            }
         }
 
         /// <summary>

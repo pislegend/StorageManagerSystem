@@ -49,3 +49,8 @@ C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\StorageAccessData
 C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\StorageMember.pdb
 C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmBackup.resources
 C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\StorageManager.frmByXxInfo.resources
+C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\RdlCompile.cache
+C:\Users\surface\StorageManagerSystem\StorageManager\obj\Debug\RdlCompile.compiled
+C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\EntityFramework.dll
+C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\EntityFramework.xml
+C:\Users\surface\StorageManagerSystem\StorageManager\bin\Debug\zh-Hans\EntityFramework.resources.dll

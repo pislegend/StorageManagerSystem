@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrkmanage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grpCz = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHcnum = new System.Windows.Forms.TextBox();
             this.btnRk = new System.Windows.Forms.Button();
             this.btnCk = new System.Windows.Forms.Button();
             this.grpSr = new System.Windows.Forms.GroupBox();
+            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnManual = new System.Windows.Forms.Button();
             this.dtpCz = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,16 +50,15 @@
             this.btnScanner = new System.Windows.Forms.Button();
             this.grpByxi = new System.Windows.Forms.GroupBox();
             this.dgvByCrkInfo = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbType = new System.Windows.Forms.ComboBox();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColById = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCzUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCzTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColByInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.BJTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grpCz.SuspendLayout();
@@ -62,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvByCrkInfo)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -94,14 +100,34 @@
             this.grpCz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCz.AutoSize = true;
+            this.grpCz.Controls.Add(this.label3);
+            this.grpCz.Controls.Add(this.txtHcnum);
             this.grpCz.Controls.Add(this.btnRk);
             this.grpCz.Controls.Add(this.btnCk);
-            this.grpCz.Location = new System.Drawing.Point(1250, 6);
+            this.grpCz.Location = new System.Drawing.Point(1226, 6);
             this.grpCz.Name = "grpCz";
             this.grpCz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.grpCz.Size = new System.Drawing.Size(732, 216);
+            this.grpCz.Size = new System.Drawing.Size(756, 216);
             this.grpCz.TabIndex = 3;
             this.grpCz.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(274, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(346, 24);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "：出入库为耗材时，请输入数量";
+            // 
+            // txtHcnum
+            // 
+            this.txtHcnum.Enabled = false;
+            this.txtHcnum.Location = new System.Drawing.Point(289, 141);
+            this.txtHcnum.Name = "txtHcnum";
+            this.txtHcnum.Size = new System.Drawing.Size(176, 35);
+            this.txtHcnum.TabIndex = 18;
+            this.txtHcnum.Text = "0";
             // 
             // btnRk
             // 
@@ -141,10 +167,32 @@
             this.grpSr.Location = new System.Drawing.Point(6, 6);
             this.grpSr.Name = "grpSr";
             this.grpSr.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grpSr.Size = new System.Drawing.Size(1225, 216);
+            this.grpSr.Size = new System.Drawing.Size(1203, 216);
             this.grpSr.TabIndex = 2;
             this.grpSr.TabStop = false;
             this.grpSr.Text = "输入";
+            // 
+            // cmbType
+            // 
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "备件",
+            "仪表",
+            "耗材"});
+            this.cmbType.Location = new System.Drawing.Point(139, 34);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(121, 32);
+            this.cmbType.TabIndex = 21;
+            this.cmbType.TextChanged += new System.EventHandler(this.cmbType_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(59, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 24);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "类型";
             // 
             // btnManual
             // 
@@ -244,58 +292,6 @@
             this.dgvByCrkInfo.TabIndex = 0;
             this.dgvByCrkInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvByCrkInfo_CellDoubleClick);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(8, 39);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1994, 867);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "出入库单查询";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.reportViewer1);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1988, 861);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(3, 31);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
-            this.reportViewer1.Size = new System.Drawing.Size(1982, 827);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 24);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "类型";
-            // 
-            // cmbType
-            // 
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
-            "备件",
-            "仪表",
-            "耗材"});
-            this.cmbType.Location = new System.Drawing.Point(139, 34);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(121, 32);
-            this.cmbType.TabIndex = 21;
-            // 
             // ColId
             // 
             this.ColId.HeaderText = "序号";
@@ -321,6 +317,44 @@
             this.ColByInfo.HeaderText = "详情（请双击）";
             this.ColByInfo.Name = "ColByInfo";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1994, 867);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "出入库单查询";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.reportViewer1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1988, 861);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.BJTableBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "StorageManager.ReportBj.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 31);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(1982, 827);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // BJTableBindingSource
+            // 
+            this.BJTableBindingSource.DataSource = typeof(StorageMember.BJTable);
+            // 
             // frmCrkmanage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -336,12 +370,14 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.grpCz.ResumeLayout(false);
+            this.grpCz.PerformLayout();
             this.grpSr.ResumeLayout(false);
             this.grpSr.PerformLayout();
             this.grpByxi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvByCrkInfo)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,6 +408,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCzUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCzTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColByInfo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHcnum;
+        private System.Windows.Forms.BindingSource BJTableBindingSource;
 
     }
 }

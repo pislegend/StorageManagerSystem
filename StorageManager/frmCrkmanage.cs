@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StorageAccessData;
 using StorageMember;
+using System.Collections;
 
 namespace StorageManager
 {
     public partial class frmCrkmanage : frmBase
     {
-        #region 全局变量 枚举
+        #region 全局变量 枚举数据库中字段对应的汉语
         DataTable dt = new DataTable();
         int typenumber = 0;
         enum BJTable_E { 备件编号,备件名称,备件部件号,备件序列号,备件所属设备,备件所属部门,备件状态,备件是否在仓库,备件责任人,备件管理员};
@@ -25,6 +26,7 @@ namespace StorageManager
         public frmCrkmanage()
         {
             InitializeComponent();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -169,15 +171,23 @@ namespace StorageManager
 
         private void dgvByCrkInfo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmByXxInfo fxi = new frmByXxInfo();
-                if(typenumber==1)
+            if (typenumber == 0)
+            {
+                ShowAlertMessage("没有要查询的数据！");
+            }
+            else
+            {
+                frmByXxInfo fxi = new frmByXxInfo();
+                if (typenumber == 1)
                 {
-                    foreach(int mycode in Enum.GetValues(typeof(BJTable_E)) )
+                    foreach (int mycode in Enum.GetValues(typeof(BJTable_E)))
                     {
-                        string strName = Enum.GetName(typeof(BJTable_E),mycode);
+                        string strName = Enum.GetName(typeof(BJTable_E), mycode);
                         //string strValue = mycode.ToString();
+                        fxi.dgvXxInfo.Rows.Add();
                         fxi.dgvXxInfo.Rows[mycode].Cells[0].Value = strName;
                         fxi.dgvXxInfo.Rows[mycode].Cells[1].Value = dt.Rows[0][mycode];
+
                     }
                 }
                 else if (typenumber == 2)
@@ -186,6 +196,7 @@ namespace StorageManager
                     {
                         string strName = Enum.GetName(typeof(YBTools_E), mycode);
                         //string strValue = mycode.ToString();
+                        fxi.dgvXxInfo.Rows.Add();
                         fxi.dgvXxInfo.Rows[mycode].Cells[0].Value = strName;
                         fxi.dgvXxInfo.Rows[mycode].Cells[1].Value = dt.Rows[0][mycode];
                     }
@@ -196,23 +207,67 @@ namespace StorageManager
                     {
                         string strName = Enum.GetName(typeof(HCTable_E), mycode);
                         //string strValue = mycode.ToString();
+                        fxi.dgvXxInfo.Rows.Add();
                         fxi.dgvXxInfo.Rows[mycode].Cells[0].Value = strName;
                         fxi.dgvXxInfo.Rows[mycode].Cells[1].Value = dt.Rows[0][mycode];
                     }
                 }
-  
-
-            fxi.Show();
-        }
-
-        private void btnRk_Click(object sender, EventArgs e)
-        {
-
+                fxi.Show();
+            }
         }
 
         private void btnCk_Click(object sender, EventArgs e)
         {
+ 
+        }
 
+
+
+        private void cmbType_TextChanged(object sender, EventArgs e)
+        {
+            if (this.cmbType.Text.ToString().Trim() == "耗材")
+            {
+                this.txtHcnum.Enabled = true;
+            }
+            else
+            {
+                this.txtHcnum.Enabled = false;
+            }
+        }
+
+        private void btnRk_Click(object sender, EventArgs e)
+        {
+            DeviceCrkManage dcm = new DeviceCrkManage();
+            ArrayList errorlist = new ArrayList();//datagridview中没有完成导入的条目将会被存入该可变数组中
+            string errormessage = null;
+            string ckorrk = "c";
+            string id = "0";
+            int hcnum = Convert.ToInt32(this.txtHcnum.Text.ToString());
+            for (int i = 0; i < dgvByCrkInfo.Rows.Count; i++)
+            {
+                id = dgvByCrkInfo.Rows[i].Cells[1].Value.ToString().Trim();
+                bool czisnotsuccess = dcm.UpdateInfotodatebase(ckorrk, typenumber, id, hcnum);//出库是否成功bool值
+                if (czisnotsuccess)
+                { }
+                else
+                {
+                    ShowAlertMessage("请确保你的数据库中存在该项目：" + id);
+                    errorlist.Add(id);
+                }
+            }
+
+            if (errorlist == null)
+            {
+                ShowAlertMessage("出库成功！");
+            }
+            else
+            {
+                foreach (int i in errorlist)
+                {
+                    errormessage = errormessage + errorlist[i] + ",";
+                }
+                ShowAlertMessage(errormessage + "。");
+            }
         }
 
     }
