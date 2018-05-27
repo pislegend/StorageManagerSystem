@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrkmanage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.BJTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grpCz = new System.Windows.Forms.GroupBox();
@@ -50,15 +51,15 @@
             this.btnScanner = new System.Windows.Forms.Button();
             this.grpByxi = new System.Windows.Forms.GroupBox();
             this.dgvByCrkInfo = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColById = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCzUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCzTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColByInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BJTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grpCz.SuspendLayout();
@@ -67,8 +68,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvByCrkInfo)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // BJTableBindingSource
+            // 
+            this.BJTableBindingSource.DataSource = typeof(StorageMember.BJTable);
             // 
             // tabControl1
             // 
@@ -197,11 +201,11 @@
             // btnManual
             // 
             this.btnManual.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnManual.Location = new System.Drawing.Point(765, 109);
+            this.btnManual.Location = new System.Drawing.Point(890, 109);
             this.btnManual.Name = "btnManual";
             this.btnManual.Size = new System.Drawing.Size(284, 73);
             this.btnManual.TabIndex = 19;
-            this.btnManual.Text = "请手动输入";
+            this.btnManual.Text = "确定查询";
             this.btnManual.UseVisualStyleBackColor = false;
             this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
             // 
@@ -242,11 +246,11 @@
             // btnScanner
             // 
             this.btnScanner.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnScanner.Location = new System.Drawing.Point(411, 109);
+            this.btnScanner.Location = new System.Drawing.Point(63, 109);
             this.btnScanner.Name = "btnScanner";
             this.btnScanner.Size = new System.Drawing.Size(284, 73);
             this.btnScanner.TabIndex = 1;
-            this.btnScanner.Text = "请使用扫码器";
+            this.btnScanner.Text = "请使用扫码器或手动输入";
             this.btnScanner.UseVisualStyleBackColor = false;
             this.btnScanner.Click += new System.EventHandler(this.btnScanner_Click);
             // 
@@ -292,31 +296,6 @@
             this.dgvByCrkInfo.TabIndex = 0;
             this.dgvByCrkInfo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvByCrkInfo_CellDoubleClick);
             // 
-            // ColId
-            // 
-            this.ColId.HeaderText = "序号";
-            this.ColId.Name = "ColId";
-            // 
-            // ColById
-            // 
-            this.ColById.HeaderText = "编号";
-            this.ColById.Name = "ColById";
-            // 
-            // ColCzUser
-            // 
-            this.ColCzUser.HeaderText = "操作人信息";
-            this.ColCzUser.Name = "ColCzUser";
-            // 
-            // ColCzTime
-            // 
-            this.ColCzTime.HeaderText = "操作时间";
-            this.ColCzTime.Name = "ColCzTime";
-            // 
-            // ColByInfo
-            // 
-            this.ColByInfo.HeaderText = "详情（请双击）";
-            this.ColByInfo.Name = "ColByInfo";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -351,9 +330,30 @@
             this.reportViewer1.Size = new System.Drawing.Size(1982, 827);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BJTableBindingSource
+            // ColId
             // 
-            this.BJTableBindingSource.DataSource = typeof(StorageMember.BJTable);
+            this.ColId.HeaderText = "序号";
+            this.ColId.Name = "ColId";
+            // 
+            // ColById
+            // 
+            this.ColById.HeaderText = "物品编号";
+            this.ColById.Name = "ColById";
+            // 
+            // ColCzUser
+            // 
+            this.ColCzUser.HeaderText = "操作人信息";
+            this.ColCzUser.Name = "ColCzUser";
+            // 
+            // ColCzTime
+            // 
+            this.ColCzTime.HeaderText = "操作时间";
+            this.ColCzTime.Name = "ColCzTime";
+            // 
+            // ColByInfo
+            // 
+            this.ColByInfo.HeaderText = "详情（请双击）";
+            this.ColByInfo.Name = "ColByInfo";
             // 
             // frmCrkmanage
             // 
@@ -366,6 +366,7 @@
             this.TabText = "备件仪表出入库";
             this.Text = "备件仪表耗材出入库";
             this.Load += new System.EventHandler(this.frmRkmanage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -377,7 +378,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvByCrkInfo)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BJTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,14 +403,14 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHcnum;
+        private System.Windows.Forms.BindingSource BJTableBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColById;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCzUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCzTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColByInfo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHcnum;
-        private System.Windows.Forms.BindingSource BJTableBindingSource;
 
     }
 }

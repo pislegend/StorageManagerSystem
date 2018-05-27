@@ -22,6 +22,11 @@ namespace StorageAccessData
         public DataTable CxInfofromdatabase(string DeviceID,int typenumber)
         {
             //Devices devices = new Devices();
+            //将从数据库中读取的数据存入dt中之后，再存入实体类中，便于报表调用数据
+            BJTable bjtable = new BJTable();
+            YBTools ybtools = new YBTools();
+            HCTable hcttable = new HCTable();
+
             CommonSql pComm = new CommonSql();
             DataTable dt = new DataTable();
             StringBuilder strSql = new StringBuilder();
@@ -36,6 +41,18 @@ namespace StorageAccessData
                     strSql.Append("BJId=");
                     strSql.Append("'"+DeviceID+"'");
                     dt = pComm.ExeForDtl(strSql.ToString(), dtlName);
+                    #region 将dt中的数据存入实体类中，便于报表调用
+                    bjtable.BJID = dt.Rows[0][0].ToString();
+                    bjtable.BJNAME = dt.Rows[0][1].ToString();
+                    bjtable.BJPN = dt.Rows[0][2].ToString();
+                    bjtable.BJSN = dt.Rows[0][3].ToString();
+                    bjtable.BJFACILITY = dt.Rows[0][4].ToString();
+                    bjtable.BJDEPART = dt.Rows[0][5].ToString();
+                    bjtable.BJSTATE = dt.Rows[0][6].ToString();
+                    bjtable.BJISINSTORAGE = dt.Rows[0][7].ToString();
+                    bjtable.BJPERSONINCHARGE = dt.Rows[0][8].ToString();
+                    bjtable.BJSTORAGEMANAGER = dt.Rows[0][9].ToString();
+                    #endregion
                     pComm.Close();
                     break;
                 #region 无用代码
@@ -65,6 +82,9 @@ namespace StorageAccessData
                     strSql.Append("YBToolId=");
                     strSql.Append("'"+DeviceID+"'");
                     dt = pComm.ExeForDtl(strSql.ToString(), dtlName);
+                    #region
+
+                    #endregion
                     pComm.Close();
                     break;
                 case 3://耗材

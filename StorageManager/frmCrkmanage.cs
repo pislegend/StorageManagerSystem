@@ -47,11 +47,24 @@ namespace StorageManager
             this.ActiveControl = txtById;
         }
 
-
+        /// <summary>
+        /// 确定按钮，输入完信息后进行查询
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnManual_Click(object sender, EventArgs e)
         {
-            this.txtById.Enabled = true;
-            this.ActiveControl = txtById;
+            //this.txtById.Enabled = true;
+            //this.ActiveControl = txtById;
+            if (cmbType.Text == "")
+            { ShowAlertMessage("请选择类型！"); }
+            else if (cmbType.Text == "备件")
+            { typenumber = 1; }
+            else if (cmbType.Text == "仪表")
+            { typenumber = 2; }
+            else
+            { typenumber = 3; }
+            TransDatatoView(typenumber);
         }
 
         #region 无用函数
@@ -218,10 +231,39 @@ namespace StorageManager
 
         private void btnCk_Click(object sender, EventArgs e)
         {
- 
+
+            DeviceCrkManage dcm = new DeviceCrkManage();
+            ArrayList errorlist = new ArrayList();//datagridview中没有完成导入的条目将会被存入该可变数组中
+            string errormessage = null;
+            string ckorrk = "c";
+            string id = "0";
+            int hcnum = Convert.ToInt32(this.txtHcnum.Text.ToString());
+            for (int i = 0; i < dgvByCrkInfo.Rows.Count-1; i++)
+            {
+                id = dgvByCrkInfo.Rows[i].Cells[1].Value.ToString().Trim();
+                bool czisnotsuccess = dcm.UpdateInfotodatebase(ckorrk, typenumber, id, hcnum);//出库是否成功bool值
+                if (czisnotsuccess)
+                { }
+                else
+                {
+                    //ShowAlertMessage("请确保你的数据库中存在该项目：" + id);
+                    errorlist.Add(id);
+                }
+            }
+
+            if (errorlist.Count == 0)
+            {
+                ShowAlertMessage("出库成功！");
+            }
+            else
+            {
+                foreach (int i in errorlist)
+                {
+                    errormessage = errormessage + errorlist[i] + ",";
+                }
+                ShowAlertMessage(errormessage +"上述编号的物品不在仓库中！");
+            }
         }
-
-
 
         private void cmbType_TextChanged(object sender, EventArgs e)
         {
@@ -240,25 +282,25 @@ namespace StorageManager
             DeviceCrkManage dcm = new DeviceCrkManage();
             ArrayList errorlist = new ArrayList();//datagridview中没有完成导入的条目将会被存入该可变数组中
             string errormessage = null;
-            string ckorrk = "c";
+            string ckorrk = "r";
             string id = "0";
             int hcnum = Convert.ToInt32(this.txtHcnum.Text.ToString());
-            for (int i = 0; i < dgvByCrkInfo.Rows.Count; i++)
+            for (int i = 0; i < dgvByCrkInfo.Rows.Count - 1; i++)
             {
                 id = dgvByCrkInfo.Rows[i].Cells[1].Value.ToString().Trim();
-                bool czisnotsuccess = dcm.UpdateInfotodatebase(ckorrk, typenumber, id, hcnum);//出库是否成功bool值
-                if (czisnotsuccess)
+                bool rzisnotsuccess = dcm.UpdateInfotodatebase(ckorrk, typenumber, id, hcnum);//出库是否成功bool值
+                if (rzisnotsuccess)
                 { }
                 else
                 {
-                    ShowAlertMessage("请确保你的数据库中存在该项目：" + id);
+                    //ShowAlertMessage("请确保你的数据库中存在该项目：" + id);
                     errorlist.Add(id);
                 }
             }
 
-            if (errorlist == null)
+            if (errorlist.Count == 0)
             {
-                ShowAlertMessage("出库成功！");
+                ShowAlertMessage("入库成功！");
             }
             else
             {
@@ -266,8 +308,9 @@ namespace StorageManager
                 {
                     errormessage = errormessage + errorlist[i] + ",";
                 }
-                ShowAlertMessage(errormessage + "。");
+                ShowAlertMessage(errormessage + "上述编号的物品已在仓库中，请不要重复入库！");
             }
+
         }
 
     }

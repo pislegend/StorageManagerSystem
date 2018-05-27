@@ -275,6 +275,10 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\StorageMember.BJTable.datasource" />
+    <None Include="Properties\DataSources\StorageMember.Devices.datasource" />
+    <None Include="Properties\DataSources\StorageMember.Employees.datasource" />
+    <None Include="Properties\DataSources\StorageMember.HCTable.datasource" />
+    <None Include="Properties\DataSources\StorageMember.YBTools.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
